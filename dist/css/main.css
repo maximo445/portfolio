@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #292727;
+  font-family: "Martian Mono", monospace; }
+
+a {
+  text-decoration: none;
+  color: #FFF; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+.center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.push-to-side {
+  margin-left: 100px; }
+
+.bg::before {
+  content: "";
+  background: url("./../img/code.jpg") no-repeat center center/cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+#website-body .container {
+  position: relative;
+  transition: width 1s ease-in-out; }
+
+#website-body .container #navigation nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100px;
+  color: white;
+  background: #262525;
+  z-index: -2; }
+
+#website-body .container #navigation nav ul {
+  padding: 0;
+  margin: 0; }
+
+#website-body .container #navigation nav ul .item {
+  list-style: none;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #4a4949; }
+
+#website-body .container #navigation nav ul .item button {
+  color: #ffffff;
+  background: none;
+  border: none; }
+
+#website-body .container #navigation nav ul .item:last-child {
+  border-bottom: none; }
+
+#website-body .container #navigation nav ul .item-1 {
+  background: #0e0e0e; }
+
+#website-body .container #navigation nav ul .item-1 .letter {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  font-size: 4.5em;
+  font-weight: bold; }
+
+#website-body .container #navigation nav ul .item-1 .letter .one {
+  color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0px; }
+
+#website-body .container #navigation nav ul .item-1 .letter .two {
+  color: #e86666;
+  position: absolute;
+  top: 0;
+  left: 3px; }
+
+#website-body .container #navigation nav ul .item-1 .name {
+  font-size: 0.7em;
+  text-align: center;
+  padding: 10px; }
+
+#website-body .container #navigation nav ul .item-1 .name p {
+  color: #8b8b8b; }
+
+#website-body .container #opening {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  transition: margin-left 0.5s ease-in-out; }
+
+#website-body .container #opening .container {
+  height: 100vh;
+  width: 100%;
+  background-color: #292727;
+  box-shadow: 5px 5px 5px #333;
+  position: relative; }
+
+#website-body .container #opening .container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 40px;
+  z-index: 2;
+  position: relative; }
+
+#website-body .container #opening .container nav .name {
+  color: #fff; }
+
+#website-body .container #opening .container nav .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30px;
+  width: 30px;
+  transition: all 0.5s ease-in-out; }
+
+#website-body .container #opening .container nav .hamburger-menu .line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff; }
+
+#website-body .container #opening .container nav .hamburger-menu:hover {
+  transform: rotate(30deg); }
+
+#website-body .container #opening .container .show-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#website-body .container #opening .container .show-text .intro {
+  color: #fff;
+  text-align: center;
+  font-family: "Martian Mono", monospace;
+  word-spacing: -0.4em;
+  text-shadow: 1.4px 1.4px 3px #292727; }
+
+#website-body .container #opening .container .show-text .intro .big {
+  animation: big-intro 1s ease-in-out 0.4s forwards; }
+
+#website-body .container #opening .container .show-text .intro .big .item {
+  opacity: 0;
+  transform: rotateX(90deg) translateY(-30px); }
+
+#website-body .container #opening .container .show-text .intro .big .item-1 {
+  font-size: 4em;
+  animation: item-intro 0.7s ease-in-out 0.4s forwards;
+  transform: perspective(200px); }
+
+#website-body .container #opening .container .show-text .intro .big .item-2 {
+  font-size: 4em;
+  animation: item-intro 0.7s ease-in-out 0.6s forwards;
+  transform: perspective(200px); }
+
+#website-body .container #opening .container .show-text .intro .big .item-3 {
+  font-size: 4em;
+  animation: item-intro 0.7s ease-in-out 0.8s forwards;
+  transform: perspective(200px); }
+
+#website-body .container #opening .container .show-text .intro .big .item-4 {
+  font-size: 4em;
+  animation: item-intro 0.7s ease-in-out 1s forwards;
+  transform: perspective(200px); }
+
+#website-body .container #opening .container .show-text .intro .small {
+  margin-top: 20px;
+  opacity: 0;
+  animation: small-intro 1s ease-in-out 1s forwards; }
+
+#website-body .container #opening .container .show-text .intro h1 {
+  margin: 3px; }
+
+@keyframes item-intro {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(-30px); }
+  to {
+    opacity: 100%;
+    transform: rotateX(0deg) translateY(0); } }
+
+@keyframes small-intro {
+  from {
+    transform: translateX(-45px); }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes big-intro {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-45px);
+    opacity: 1; }
+  85% {
+    transform: translateY(30px); }
+  100% {
+    transform: translateY(0); } }
+
+/*# sourceMappingURL=main.css.map */
