@@ -111,7 +111,8 @@ a {
       width: 100%;
       background-color: #292727;
       box-shadow: 5px 5px 5px #333;
-      position: relative; }
+      position: relative;
+      overflow: hidden; }
       #website-body .container #opening .container nav {
         display: flex;
         justify-content: space-between;
@@ -164,8 +165,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        transition: left 1s ease-in-out; }
+        align-items: center; }
         #website-body .container #opening .container .show-text .intro {
           color: #fff;
           text-align: center;
@@ -213,15 +213,26 @@ a {
             z-index: 3;
             overflow: hidden;
             width: 300px;
-            margin-right: 350px;
-            transition: width 1s ease;
-            transition: margin-left 1s ease; }
+            margin-right: 350px; }
             #website-body .container #opening .container .show-text .intro-2 .art img {
               width: 600px; }
           #website-body .container #opening .container .show-text .intro-2 .reg {
             position: absolute;
-            overflow: hidden;
-            margin-right: 50px; }
+            margin-right: 50px;
+            z-index: 2; }
+            #website-body .container #opening .container .show-text .intro-2 .reg .code_decoration {
+              top: 350px;
+              left: 460px;
+              font-size: 2em;
+              position: absolute;
+              color: #fff;
+              opacity: 0.8;
+              z-index: -1; }
+              #website-body .container #opening .container .show-text .intro-2 .reg .code_decoration .one {
+                font-weight: lighter; }
+              #website-body .container #opening .container .show-text .intro-2 .reg .code_decoration .two {
+                font-size: 1.3em;
+                font-weight: 900; }
             #website-body .container #opening .container .show-text .intro-2 .reg img {
               width: 600px; }
 
